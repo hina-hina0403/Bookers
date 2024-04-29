@@ -1,1 +1,11 @@
-show
+<p>Book was successfully created.</p>
+
+<p><strong>Title:</strong><%=@book.title%></p>
+<p><strong>Body:</strong><%=@book.body%></p>
+
+
+<span>
+    <%= link_to "Edit", "/books/#{@book.id}/edit" %>
+     |
+    <%= link_to "Back", "/books" %>
+</span>
