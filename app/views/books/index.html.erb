@@ -6,13 +6,13 @@
   <th>Body</th>
     <td><%= book.title %></td>
     <td><%= book.body %></td>
-  
+
     <td><%= link_to "Show", "/books/#{book.id}" %></td>
     <td><%= link_to "Edit", "/books/#{book.id}/edit" %></td>
-    <td><%= link_to "Destroy" %></td>
-  
+    <td><%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure？" %></td>
+
 </table>
-  
+
 <% end  %>
 
 
@@ -29,3 +29,4 @@
 
   <%= f.submit 'Create Book' %>
 <% end %>
+
