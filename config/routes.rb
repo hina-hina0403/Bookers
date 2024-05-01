@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/books/:id' => 'books#show', as: 'book'
   get '/books/:id/edit' => 'books#edit'
   get '/top' => 'homes#top'
+  patch 'books/:id' => 'books#update', as: 'update_book'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
